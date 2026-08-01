@@ -1,0 +1,22 @@
+{
+  "name": "symphony-agent-agnostic",
+  "version": "0.1.0",
+  "description": "Agent-agnostic Symphony orchestrator: spec fork plus a TypeScript/Bun implementation",
+  "license": "Apache-2.0",
+  "type": "module",
+  "module": "src/index.ts",
+  "bin": {
+    "symphony": "./src/cli.ts"
+  },
+  "scripts": {
+    "spec:build": "bun run tools/spec-build.ts",
+    "spec:check": "bun run tools/spec-check.ts",
+    "start": "bun run src/cli.ts",
+    "test": "bun test",
+    "typecheck": "bunx tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.6.0"
+  }
+}
