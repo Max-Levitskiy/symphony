@@ -1,0 +1,32 @@
+{
+  "issues": [
+    {
+      "id": "i1",
+      "identifier": "DEMO-1",
+      "title": "Add a changelog entry",
+      "description": "Create CHANGELOG.md with an entry for the next release.",
+      "state": "Todo",
+      "priority": 1,
+      "labels": [
+        "symphony"
+      ],
+      "dispatchable": true,
+      "url": "https://tracker.example/DEMO-1",
+      "created_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "i2",
+      "identifier": "DEMO-2",
+      "title": "Fix the flaky timer test",
+      "description": "The retry test is timing dependent.",
+      "state": "Todo",
+      "priority": 3,
+      "labels": [
+        "symphony"
+      ],
+      "dispatchable": true,
+      "url": "https://tracker.example/DEMO-2",
+      "created_at": "2026-01-02T00:00:00Z"
+    }
+  ]
+}
