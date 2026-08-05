@@ -40,9 +40,28 @@ A workflow using upstream's `codex:` block keeps working unchanged — it normal
 
 ```sh
 bun install
-bun test                 # 99 tests, including a real end-to-end run
+bun test                 # 100 tests, including a real end-to-end subprocess run
 bun run spec:check       # verify the fork is consistent with upstream and DELTA.md
+bunx tsc --noEmit        # typecheck
 ```
+
+### See it actually run
+
+[`examples/local-demo/`](examples/local-demo/) is a complete run on your machine in about ten
+seconds — no tracker account, no API key, no coding agent installed:
+
+```sh
+cd examples/local-demo
+export DEMO_DIR=$(pwd)
+bun run ../../src/cli.ts ./WORKFLOW.md      # dashboard at http://127.0.0.1:4477
+```
+
+Two issues get dispatched in priority order, a twelve-line shell script plays the coding agent, both
+issues reach `Done`, and their workspaces are cleaned on the terminal transition. The demo's README
+shows how to inspect the exact prompt the agent received each turn, which is where the
+`session_continuation: false` fallback becomes visible.
+
+### Run it for real
 
 To run the orchestrator against a repository:
 
